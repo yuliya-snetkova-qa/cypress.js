@@ -67,9 +67,9 @@ describe('Проверка авторизации', function () {
 describe('Покупка аватара', function () {                                  
     it('e2e тест на покупку нового аватара для тренера', function () {     
          cy.visit('https://pokemonbattle.ru/');                            // Переходим на сайт
-         cy.get('input[type="email"]').type('yuliya.snetkova5@yandex.ru');  // Вводим верный логин
-         cy.get('input[type="password"]').type('Artemka19');              // Вводим верный пароль
-         cy.get('button[type="submit"]').click();                        // Нажимаем кнопку Подтвердить
+         cy.get('input[type="email"]').type('USER_LOGIN');                // Вводим верный логин
+         cy.get('input[type="password"]').type('USER_PASSWORD');              // Вводим верный пароль
+         cy.get('button[type="submit"]').click();                      // Нажимаем кнопку Подтвердить
          cy.get('.header__btns > :nth-child(4)').click();               // Нажимаем кнопку Магазин
          cy.get('.available > button').first().click();                       // Кликаем Купить у первого доступного аватара
          cy.get('.credit').type('4111111111111111');                     // Вводим номер карты
